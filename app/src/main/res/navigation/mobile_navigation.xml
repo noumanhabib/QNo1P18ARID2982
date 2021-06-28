@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mobiwhat.ui.Fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_brands"
+        android:name="com.example.mobiwhat.ui.Fragments.BrandsFragment"
+        android:label="@string/menu_brands"
+        tools:layout="@layout/fragment_brands" />
+
+    <fragment
+        android:id="@+id/nav_mobile"
+        android:name="com.example.mobiwhat.ui.Fragments.TopMobilesFragment"
+        android:label="@string/menu_mobile"
+        tools:layout="@layout/fragment_mobiles" />
+
+    <fragment
+        android:id="@+id/nav_comparison"
+        android:name="com.example.mobiwhat.ui.Fragments.ComparisonFragment"
+        android:label="@string/menu_comparison"
+        tools:layout="@layout/fragment_comparison" />
+    <fragment
+        android:id="@+id/nav_favourite"
+        android:name="com.example.mobiwhat.ui.Fragments.FavouriteFragment"
+        android:label="@string/favourite"
+        tools:layout="@layout/fragment_favourite" />
+    <fragment
+        android:id="@+id/nav_mobile_detail"
+        android:name="com.example.mobiwhat.ui.Fragments.MobileDetailFragment"
+        android:label="@string/mobile_detail"
+        tools:layout="@layout/fragment_mobile_detail" />
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.example.mobiwhat.ui.Fragments.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" />
+</navigation>
