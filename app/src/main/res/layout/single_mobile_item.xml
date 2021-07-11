@@ -2,114 +2,139 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/Popular_container"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
     app:cardElevation="15dp"
     app:cardCornerRadius="15dp">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:layout_margin="20dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+        <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="15dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                >
-                <ImageView
-                    android:id="@+id/mob_image"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:src="@drawable/slide1"
-                    android:scaleType="centerCrop"
-                    android:adjustViewBounds="true"
-                    />
-
-                <ImageButton
-                    android:id="@+id/imageButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_gravity="end"
-                    android:background="@android:color/transparent"
-                    android:padding="4dp"
-                    android:src="@drawable/ic_baseline_favorite_border_24"/>
-
-            </com.google.android.material.card.MaterialCardView>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="141dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Student Name: "
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/mob_name"
-            android:layout_width="match_parent"
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:text="Mobile Name"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:fontFamily="sans-serif"
-            />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="73dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Semester #: "
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/mob_desc"
-            android:layout_width="match_parent"
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mobile description"
-            android:maxLines="1"
-            android:textSize="14sp"
-            android:textColor="@color/text_color"
-            android:fontFamily="sans-serif"
-            />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="107dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Arid #"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/student_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            >
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="146dp"
+            android:layout_marginLeft="146dp"
+            android:layout_marginBottom="142dp"
+            android:text="Nouman Habib" />
 
-            <TextView
-                android:id="@+id/mob_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:text="500"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
-                />
+        <TextView
+            android:id="@+id/student_smester"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="122dp"
+            android:layout_marginLeft="122dp"
+            android:layout_marginBottom="75dp"
+            android:text="6" />
 
-            <TextView
-                android:id="@+id/currency"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:text="$"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_toRightOf="@id/mob_price"
-                android:textColor="@color/black"
-                />
+        <TextView
+            android:id="@+id/student_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="66dp"
+            android:layout_marginLeft="66dp"
+            android:layout_marginBottom="110dp"
+            android:text="18-arid-2982" />
 
+        <Button
+            android:id="@+id/mark_present_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginBottom="13dp"
+            android:minWidth="70dp"
+            android:minHeight="40dp"
+            android:text="Present"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:backgroundTint="#00FFFFFF"
+            app:rippleColor="#2196F3"
+            app:strokeColor="#2196F3"
+            app:strokeWidth="1dp" />
 
-        </RelativeLayout>
-
-    </LinearLayout>
+        <Button
+            android:id="@+id/mark_absent_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="138dp"
+            android:layout_marginLeft="138dp"
+            android:layout_marginBottom="12dp"
+            android:minWidth="70dp"
+            android:minHeight="40dp"
+            android:text="Absent"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:backgroundTint="#00FFFFFF"
+            app:strokeColor="#009688"
+            app:strokeWidth="1dp" />
+    </RelativeLayout>
 
 
 </com.google.android.material.card.MaterialCardView>

@@ -1,4 +1,4 @@
-package com.example.mobiwhat.ui.modelsAdapters;
+package com.example.qno1p18arid2982.ui.modelsAdapters;
 
 public class BrandsModel {
     int image;

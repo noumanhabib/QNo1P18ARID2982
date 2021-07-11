@@ -1,4 +1,4 @@
-package com.example.mobiwhat.ui.Activities;
+package com.example.qno1p18arid2982.ui.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
-import com.example.mobiwhat.R;
+import com.example.qno1p18arid2982.R;
 
 public class SplashActivity extends AppCompatActivity {
     private static final int SPLASH_TIME_OUT = 3000;

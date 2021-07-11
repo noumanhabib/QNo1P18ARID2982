@@ -1,4 +1,4 @@
-package com.example.mobiwhat.ui.Fragments;
+package com.example.qno1p18arid2982.ui.Fragments;
 
 import android.os.Bundle;
 
@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.mobiwhat.R;
+import com.example.qno1p18arid2982.R;
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 
 public class MobileDetailFragment extends Fragment {

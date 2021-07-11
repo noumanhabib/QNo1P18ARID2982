@@ -1,29 +1,29 @@
-package com.example.mobiwhat.ui.Activities;
+package com.example.qno1p18arid2982.ui.Activities;
 
-import android.app.Fragment;
 import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
 import android.view.Menu;
-
-import com.example.mobiwhat.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.navigation.NavigationView;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import androidx.room.Room;
+
+import com.example.qno1p18arid2982.R;
+import com.example.qno1p18arid2982.ui.DBHelper.AppDatabase;
+import com.example.qno1p18arid2982.ui.DBHelper.StudentDao;
+import com.example.qno1p18arid2982.ui.Fragments.StudentViewModel;
+import com.google.android.material.navigation.NavigationView;
 
 public class Master_page extends AppCompatActivity {
-
     private AppBarConfiguration mAppBarConfiguration;
+    AppDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,14 +31,14 @@ public class Master_page extends AppCompatActivity {
         setContentView(R.layout.activity_master_page);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
+        StudentViewModel viewModel = new ViewModelProvider(this).get(StudentViewModel.class);
+
+        db = Room.databaseBuilder(this.getApplicationContext(),
+                AppDatabase.class, "studentlms").allowMainThreadQueries().build();
+        StudentDao studentDao = db.studentDao();
+        viewModel.addAll(studentDao.getAll());
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -61,16 +61,6 @@ public class Master_page extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        int id=item.getItemId();
-        if(id==R.id.favourite){
-            navController.navigate(R.id.nav_favourite);
-        }
-        else if(id==R.id.comparison) {
-            navController.navigate(R.id.nav_comparison);
-        } if(id==R.id.search_icon){
-            navController.navigate(R.id.nav_search);
-        }
         return super.onOptionsItemSelected(item);
     }
 

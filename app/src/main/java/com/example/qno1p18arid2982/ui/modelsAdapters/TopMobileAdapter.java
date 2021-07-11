@@ -1,4 +1,4 @@
-package com.example.mobiwhat.ui.modelsAdapters;
+package com.example.qno1p18arid2982.ui.modelsAdapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,30 +10,28 @@ import androidx.annotation.NonNull;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mobiwhat.R;
-import com.makeramen.roundedimageview.RoundedImageView;
+import com.example.qno1p18arid2982.R;
 
 import java.util.ArrayList;
 
-public class MobileAdapter extends RecyclerView.Adapter<MobileAdapter.MobileHolder> {
+public class TopMobileAdapter extends RecyclerView.Adapter<TopMobileAdapter.TopMobileHolder>  {
+    private ArrayList<TopMobileModel> dataSet;
 
-    private ArrayList<MobileModel> dataSet;
-
-    public MobileAdapter(ArrayList<MobileModel> dataSet) {
+    public TopMobileAdapter(ArrayList<TopMobileModel> dataSet) {
         this.dataSet = dataSet;
     }
 
     @NonNull
     @Override
-    public MobileHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TopMobileHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.single_mobile_item, parent, false);
-        MobileHolder holder=new MobileHolder(view);
+                .inflate(R.layout.single_top_mobile_item, parent, false);
+        TopMobileHolder holder=new TopMobileHolder(view);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MobileHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TopMobileHolder holder, int position) {
         TextView mobileName = holder.mobName;
         TextView mobileDesc = holder.mobDesc;
         TextView mobilePrice = holder.mobPrice;
@@ -60,20 +58,20 @@ public class MobileAdapter extends RecyclerView.Adapter<MobileAdapter.MobileHold
         return dataSet.size();
     }
 
-    public class MobileHolder extends RecyclerView.ViewHolder {
+
+    public class TopMobileHolder extends RecyclerView.ViewHolder {
         TextView mobName;
         TextView mobDesc;
         ImageView mobImage;
         TextView  mobPrice;
 
-        public MobileHolder(@NonNull View itemView) {
+        public TopMobileHolder(@NonNull View itemView) {
             super(itemView);
+
             this.mobName = (TextView) itemView.findViewById(R.id.mob_name);
             this.mobDesc = (TextView) itemView.findViewById(R.id.mob_desc);
-
             this.mobImage = (ImageView)itemView.findViewById(R.id.mob_image);
             this.mobPrice = (TextView) itemView.findViewById(R.id.mob_price);
-
         }
     }
 }

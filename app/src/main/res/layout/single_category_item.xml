@@ -6,21 +6,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        app:cardBackgroundColor="@color/purple_700"
-        android:id="@+id/item"
-        app:cardCornerRadius="15dp">
+        app:cardBackgroundColor="#00FFFFFF"
+        app:cardCornerRadius="15dp"
+        app:strokeColor="#2196F3"
+        app:strokeWidth="1dp">
 
         <TextView
             android:id="@+id/categoryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/open_sans_semibold"
             android:gravity="center"
             android:text="Samsung"
-            android:textColor="@color/white"
-            android:fontFamily="@font/open_sans_semibold"
+            android:textColor="@color/black"
             android:textSize="18sp" />
     </com.google.android.material.card.MaterialCardView>
 

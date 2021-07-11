@@ -1,4 +1,4 @@
-package com.example.mobiwhat.ui.Fragments;
+package com.example.qno1p18arid2982.ui.Fragments;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -7,16 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mobiwhat.R;
-import com.example.mobiwhat.ui.modelsAdapters.BrandAdapter;
-import com.example.mobiwhat.ui.modelsAdapters.BrandsModel;
-import com.example.mobiwhat.ui.modelsAdapters.MobileAdapter;
-import com.example.mobiwhat.ui.modelsAdapters.MobileModel;
+import com.example.qno1p18arid2982.R;
+import com.example.qno1p18arid2982.ui.modelsAdapters.BrandAdapter;
+import com.example.qno1p18arid2982.ui.modelsAdapters.BrandsModel;
 
 import java.util.ArrayList;
 

@@ -1,50 +1,48 @@
-package com.example.mobiwhat.ui.modelsAdapters;
+package com.example.qno1p18arid2982.ui.modelsAdapters;
 
-import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mobiwhat.R;
+import com.example.qno1p18arid2982.R;
+import com.example.qno1p18arid2982.ui.Fragments.HomeFragment;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.ArrayList;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryHolder> {
+public class ClassAdapter extends RecyclerView.Adapter<ClassAdapter.CategoryHolder> {
     ArrayList categoryNames;
 
-    public CategoryAdapter(ArrayList categoryNames) {
+    HomeFragment mainFragment;
+
+    public ClassAdapter(ArrayList categoryNames, HomeFragment f) {
         this.categoryNames = categoryNames;
+        mainFragment = f;
     }
+
 
     @NonNull
     @Override
     public CategoryHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View listItem= layoutInflater.inflate(R.layout.single_category_item, parent, false);
-        CategoryHolder catHolder = new CategoryHolder(listItem);
-        return catHolder;
+        return new CategoryHolder(listItem);
     }
 
     @Override
     public void onBindViewHolder(@NonNull CategoryHolder holder, int position) {
 
          holder.textView.setText(categoryNames.get(position).toString());
-
-         holder.catItem.setOnClickListener(new View.OnClickListener(){
-
-             @Override
-             public void onClick(View v) {
-                 Toast.makeText(v.getContext(),"click on item: "+categoryNames.get(position),Toast.LENGTH_LONG).show();
-             }
+         holder.catItem.setBackgroundColor(Color.TRANSPARENT);
+         holder.catItem.setOnClickListener(v -> {
+             mainFragment.onClassChange(v, categoryNames, position);
+             v.setBackgroundColor(Color.rgb(33, 150, 243));
          });
-
     }
 
     @Override
@@ -59,7 +57,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
         public CategoryHolder(@NonNull View itemView) {
             super(itemView);
             this.textView=(TextView) itemView.findViewById(R.id.categoryName);
-            catItem= (MaterialCardView) itemView.findViewById(R.id.item);
+            this.catItem = (MaterialCardView) itemView.findViewById(R.id.item);
         }
     }
 }
